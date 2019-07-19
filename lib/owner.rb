@@ -60,7 +60,7 @@ class Owner
     @pets[:cats].map {|cat| cat.mood = "nervous"}
     @pets[:cats].owner = nil
   end
-    @pets[:dogs].map {|dog| dog.mood}
+    @pets[:dogs].map {|dog| dog.mood = "nervous"}
     @pets[:dogs].owner = nil
   end
   
