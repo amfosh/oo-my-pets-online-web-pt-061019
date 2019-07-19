@@ -39,6 +39,19 @@ class Owner
     @pets[:cats].map {|cat| cat.mood = "happy"}
   end
   
+  def sell_pets
+     self.cats.each do |cat|
+      cat.mood = "nervous"
+      cat.owner = nil
+    end
+    self.dogs.each do |dog|
+      dog.mood = "nervous"
+      dog.owner = nil
+    end
+    self.cats.clear
+    self.dogs.clear
+  end
+  
   def self.all 
     @@all_owners
   end
