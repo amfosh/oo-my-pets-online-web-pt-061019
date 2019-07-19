@@ -9,7 +9,7 @@ class Cat
     @owner = owner
     @mood = "nervous"
     @@all_cats << self
-    @owner.cats << self
+    @owner.pets[:cats] << self
   end
   
   def self.all
