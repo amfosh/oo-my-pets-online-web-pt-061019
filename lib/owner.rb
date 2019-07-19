@@ -58,4 +58,3 @@ class Owner
     @dogs.map {|dog| dog.owner.clear}
   end
 end
-end
