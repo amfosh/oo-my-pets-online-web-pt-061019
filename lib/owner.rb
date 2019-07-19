@@ -11,6 +11,14 @@ class Owner
     @pets = {:dogs => [], :cats => []}
   end
   
+  def cats
+    @pets[:cats]
+  end
+  
+  def dogs 
+    @pets[:dogs]
+  end
+  
   def say_species
     "I am a #{@species}."
   end
