@@ -52,11 +52,6 @@ class Owner
   end
   
   def sell_pets
-    #@pets.map do |species, pets|
-      #@pets.map do |pet|
-        #pet.mood = "nervous"
-        #pet.owner = nil
-    #pets.clear
     self.each do |pet|
       pet.mood = "nervous"
       pet.owner = nil
