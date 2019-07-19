@@ -42,7 +42,8 @@ class Owner
   def sell_pets
     @pets = @cats + @dogs
     @pets.map {|pet| pet.mood = "nervous"}
-    pet.owner = nil
+    @cats.map {|cat| cat.owner.clear}
+    @dogs.map {|dog| dog.owner.clear}
   end
   
   def self.all 
