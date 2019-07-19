@@ -52,7 +52,7 @@ class Owner
   end
   
   def sell_pets
-    @pets.map do |pet|
+    pets.map do |pet|
       pet.mood = "nervous"
       pet.owner = nil
       end
