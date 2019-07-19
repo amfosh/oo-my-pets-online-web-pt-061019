@@ -57,11 +57,9 @@ class Owner
         #pet.mood = "nervous"
         #pet.owner = nil
     #pets.clear
-    @pets[:cats].map {|cat| cat.mood = "nervous"}
-    @pets[:cats].owner = nil
-  end
-    @pets[:dogs].map {|dog| dog.mood = "nervous"}
-    @pets[:dogs].owner = nil
+    self.each do |pet|
+      pet.mood = "nervous"
+      pet.owner = nil
   end
   
   def list_pets
