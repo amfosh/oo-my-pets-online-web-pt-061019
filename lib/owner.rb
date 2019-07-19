@@ -43,7 +43,6 @@ class Owner
     @pets = @cats + @dogs 
     @pets.map {|pet| pet.mood = "nervous"}
     pet.owner = nil
-    end
   end
   
   def self.all 
