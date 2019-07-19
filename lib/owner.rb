@@ -23,7 +23,19 @@ class Owner
     "I am a #{@species}."
   end
   
-  def buy_cat(name)
+  def self.all 
+    @@all_owners
+  end
+  
+  def self.count
+    @@all_owners.size
+  end
+  
+  def self.reset_all
+    @@all_owners.clear
+  end
+  
+    def buy_cat(name)
     Cat.new(name, self)
   end
     
@@ -40,21 +52,9 @@ class Owner
   end
   
   def sell_pets
-    @pets.each do |pet|
+    self.each do |pet|
     pet.mood = "nervous"
     pet.owner = nil
-  end
-  
-  def self.all 
-    @@all_owners
-  end
-  
-  def self.count
-    @@all_owners.size
-  end
-  
-  def self.reset_all
-    @@all_owners.clear
   end
 end
 end
