@@ -39,13 +39,6 @@ class Owner
     @pets[:cats].map {|cat| cat.mood = "happy"}
   end
   
-  def sell_pets
-    @pets[:cats].map {|cat| cat.mood = "nervous"}
-    @pets[:dogs].map {|dog| dog.mood = "nervous"}
-    @pets[:cats].owner = nil
-    @pets[:dogs].owner = nil
-  end
-  
   def self.all 
     @@all_owners
   end
