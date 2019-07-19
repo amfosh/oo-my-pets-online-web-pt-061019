@@ -57,3 +57,4 @@ class Owner
     @@all_owners.clear
   end
 end
+end
